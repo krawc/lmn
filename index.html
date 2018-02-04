@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A tribute to Laszlo Moholy-Nagy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+    $(document).mousemove(function(e) {
+        var height = $( window ).height();
+        window.x = e.pageX;
+        window.y = e.pageY;
+        var translateX = ((y-(height/2))*4);
+        var translateY = ((y-(height/2))*2.87);
+        var translate = 'translate(' + translateX + 'px, ' + translateY + 'px)';
+        $(".circle").css('transform', translate);
+        console.log(window.y);
+    });
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640">
+        <defs>
+          <path d="M0 0L640 0L640 640L0 640L0 0Z" id="f1fu4d04sk"></path>
+          <path d="M-137.26 96.4L855.72 538L792.55 680.04L-200.43 238.45L-137.26 96.4Z" id="b4FWCaOFDx"></path>
+          <path d="M101.84 874.07L455.22 -153.62L602.22 -103.07L248.84 924.62L101.84 874.07Z" id="a2dw0vZNpE"></path>
+          <path d="M-72.65 -15.9L809.17 619.23L718.32 745.38L-163.51 110.24L-72.65 -15.9Z" id="a8b2V8AT5h"></path>
+          <path d="M2.53 794.21L558.4 -139.62L691.98 -60.1L136.11 873.73L2.53 794.21Z" id="c7eol7mop3"></path>
+          <path d="M303.6 151.8C303.6 235.58 235.58 303.6 151.8 303.6C68.02 303.6 0 235.58 0 151.8C0 68.02 68.02 0 151.8 0C235.58 0 303.6 68.02 303.6 151.8Z" id="bq0PVd4nI"></path>
+        </defs>
+        <g>
+          <g>
+            <g><use xlink:href="#f1fu4d04sk" opacity="1" fill="#c3b9af" fill-opacity="0.7"></use></g>
+            <g><use xlink:href="#b4FWCaOFDx" opacity="1" fill="#14141d" fill-opacity="0.8"></use></g>
+            <g><use xlink:href="#a2dw0vZNpE" opacity="1" fill="#14141d" fill-opacity="0.8"></use></g>
+            <g><use xlink:href="#a8b2V8AT5h" opacity="1" fill="#de0900" fill-opacity="0.45"></use></g>
+            <g><use xlink:href="#c7eol7mop3" opacity="1" fill="#de0900" fill-opacity="0.45"></use></g>
+            <g class="circle"><use xlink:href="#bq0PVd4nI" opacity="1" fill="#ece6d2" fill-opacity="0.65"></use></g>
+          </g>
+        </g>
+      </svg>
+
+    </div>
+
+  </body>
+</html>
