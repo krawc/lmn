@@ -1,10 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .container-fluid {
   margin: auto;
-  max-width: 640px;
-  height: 640px;
+  transition: opacity 0.5s;
+  position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.compositionOne-cont {
+  width: fit-content;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.compositionTwo-cont {
+  width: 26em;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.compositionOne,
+.compositionTwo{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.compositionTwo{
+  max-width: 26em;
+}
+
+.container-fluid.displayed {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*COMPOSITION NO. 1*/
+
 g {
   transition: 0.2s;
+}
+
+.circle,
+.redLine,
+.blackLine {
+  transform-origin: 445px 355px;
+}
+
+.artTitle{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin: 1em 0em;
+}
+
+.arrows{
+  position: absolute;
+      /* height: 5em; */
+      margin: 1.5em;
+      width: calc(100% - 3em);
+      /* padding: 2em; */
+      top: calc(50% - 2.5em);
+      display: flex;
+      justify-content: space-between;
+      font-size: 3em;
+}
+
+
+/**COMPOSITION No. 2*/
+
+
+.artTwo {
+  transition: 1s linear;
+}
+
+.yellowLine.forAnim{
+  transform: translateY(-640px);
+}
+
+.greyLineVert.forAnim{
+  transform: translateY(-640px);
+}
+
+.brownLine.forAnim{
+  transform: translateY(640px);
+}
+
+.greyLineHor.forAnim{
+  transform: translate(-640px, -256px);
+}
+
+.blackLineVert.forAnim{
+  transform: translateY(-900px);
+}
+
+.redLineHor.forAnim{
+  transform: translate(640px, 256px);
+}
+
+
+.arc:not(.forAnim){
+  stroke-dasharray: 1000;
+  stroke-dashoffset: -1000;
+  animation: dash 4s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
